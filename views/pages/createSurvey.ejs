@@ -1,0 +1,35 @@
+<!-- views/pages/createSurvey.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="jumbotron">
+      <h2>Create Survey</h2>
+      <form class="form-inline" action="/createSurvey" method="post">
+
+        <label class="sr-only" for="name">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="name" name="name" placeholder="Survey Name">
+      
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!-- views/pages/survey.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1><%= data[0].name %></h1>
+      <form action="/submitSurvey" method="post">
+          
+        <input type="hidden" name="id" id="survey-id" value=<%= data[0].id %>
+        <input type="hidden" name="title" id="survey-name" value=<%= data[0].name %>
+
+        <label for="name" class="col-2 col-form-label">Name</label>
+        <input class="form-control" type="text" id="name" name="name" placeholder="Tejisav Brar">
+        <br>
+        <label for="age" class="col-2 col-form-label">Age</label>
+        <input class="form-control" type="number" id="Age" name="age" placeholder="25">
+        <br>
+        <label for="size" class="col-2 col-form-label">Age</label>
+        <input class="form-control" type="number" id="size" name="size" placeholder="11">
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>

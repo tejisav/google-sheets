@@ -1,0 +1,47 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Assignment 5 - Forms</h1>
+      <p>Forms created will be listed here</p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (const [key, value] of surveys.entries()) { %>
+          <tr>
+            <th scope="row"><%= value.name  %></th>
+            <td><a href="/survey?id=<%= key %>">/survey?id=<%= key %></a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>
